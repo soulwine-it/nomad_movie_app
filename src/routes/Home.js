@@ -16,7 +16,6 @@ class Home extends React.Component {
     } = await axios.get(
       "https://yts-proxy.now.sh/list_movies.json?sort_by=rating"
     );
-    //state에 받아온 정보 넣기
     this.setState({ movies, isLoading: false });
   };
   componentDidMount() {
@@ -28,7 +27,7 @@ class Home extends React.Component {
       <section className="container">
         {isLoading ? (
           <div className="loader">
-            <span className="loader__text">Loading... </span>
+            <span className="loader__text">Loading...</span>
           </div>
         ) : (
           <div className="movies">
